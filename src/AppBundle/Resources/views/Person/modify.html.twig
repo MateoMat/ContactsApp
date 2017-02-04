@@ -1,0 +1,15 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:Person:modify{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Person:modify page</h1>
+
+{{ form_start(form,{'attr':{'class':'form-group jumbotron'} }) }}
+{{ form_widget(form.name,{'attr':{'class':'form-control','placeholder':'Podaj imię'} }) }}
+{{ form_widget(form.surname,{'attr':{'class':'form-control','placeholder':'Podaj nazwisko'} }) }}
+<br>
+{{ form_widget(form.save,{'attr':{'class':'btn btn-success btn-xs'} }) }}
+{{ form_end(form) }}
+
+{% endblock %}

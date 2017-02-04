@@ -1,0 +1,25 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Lista wszystkich osób{% endblock %}
+
+{% block body %}
+    <h1>Lista wszystkich osób</h1>
+
+    {% for person in persons %}
+
+            <p>{{ person.name }}
+                {{ person.surname }}</p>
+
+            {% if person.addres is defined %}
+                {% for address in person.addres %}
+                    <p>{{ address.city }}</p>
+                    {{ address.street }}</p>
+                    {% endfor %}
+            {% endif %}
+
+            <a class="btn btn-primary btn-xs" href="/delete/{{ person.id }}">Usuń</a>
+            <a class="btn btn-primary btn-xs" href="/edit/{{ person.id }}">Zmień</a>
+        <hr>
+
+    {% endfor %}
+{% endblock %}

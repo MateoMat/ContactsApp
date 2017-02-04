@@ -1,0 +1,18 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:Addres:newAddres{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Addres:newAddres page</h1>
+
+{{ form_start(form,{'attr':{'class':'form-group jumbotron'} }) }}
+{{ form_widget(form.city,{'attr':{'class':'form-control','placeholder':'Miasto'} }) }}
+{{ form_widget(form.street,{'attr':{'class':'form-control','placeholder':'Ulica'} }) }}
+{{ form_widget(form.number1,{'attr':{'class':'form-control','placeholder':'Numer domu'} }) }}
+{{ form_widget(form.number2,{'attr':{'class':'form-control','placeholder':'Numer mieszkania'} }) }}
+{{ form_widget(form.person,{'attr':{'class':'form-control','placeholder':'Numer mieszkania'} }) }}
+<br>
+{{ form_widget(form.save,{'attr':{'class':'btn btn-success btn-xs'} }) }}
+{{ form_end(form) }}
+
+{% endblock %}

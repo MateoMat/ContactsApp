@@ -105,6 +105,26 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        // newAddres
+        if ($pathinfo === '/newAddres') {
+            return array (  '_controller' => 'AppBundle\\Controller\\AddresController::newAddresAction',  '_route' => 'newAddres',);
+        }
+
+        // app_addres_editaddres
+        if (0 === strpos($pathinfo, '/editAddres') && preg_match('#^/editAddres/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_addres_editaddres')), array (  '_controller' => 'AppBundle\\Controller\\AddresController::editAddresAction',));
+        }
+
+        // app_addres_deleteaddres
+        if (0 === strpos($pathinfo, '/deleteAddres') && preg_match('#^/deleteAddres/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_addres_deleteaddres')), array (  '_controller' => 'AppBundle\\Controller\\AddresController::deleteAddresAction',));
+        }
+
+        // app_addres_showalladdres
+        if ($pathinfo === '/showAllAddres') {
+            return array (  '_controller' => 'AppBundle\\Controller\\AddresController::showAllAddresAction',  '_route' => 'app_addres_showalladdres',);
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
@@ -112,6 +132,34 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
 
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
+        }
+
+        // newPerson
+        if ($pathinfo === '/newPerson') {
+            return array (  '_controller' => 'AppBundle\\Controller\\PersonController::newPersonAction',  '_route' => 'newPerson',);
+        }
+
+        // edit
+        if (0 === strpos($pathinfo, '/edit') && preg_match('#^/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit')), array (  '_controller' => 'AppBundle\\Controller\\PersonController::modifyAction',));
+        }
+
+        // deletePerson
+        if (0 === strpos($pathinfo, '/delete') && preg_match('#^/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'deletePerson')), array (  '_controller' => 'AppBundle\\Controller\\PersonController::deleteAction',));
+        }
+
+        if (0 === strpos($pathinfo, '/show')) {
+            // showAll
+            if ($pathinfo === '/showAll') {
+                return array (  '_controller' => 'AppBundle\\Controller\\PersonController::showAllAction',  '_route' => 'showAll',);
+            }
+
+            // app_person_showperson
+            if (preg_match('#^/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_person_showperson')), array (  '_controller' => 'AppBundle\\Controller\\PersonController::showPersonAction',));
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
