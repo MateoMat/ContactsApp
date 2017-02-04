@@ -22,32 +22,32 @@ class __TwigTemplate_b3f38f02ac5af725d1a0ef3406abba444811ddf8f5dfcfecb44c9a64611
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f198dd603e2425a368af72998cdc90e6b9cd47a8e9cb50d6ebe593a5439e6828 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f198dd603e2425a368af72998cdc90e6b9cd47a8e9cb50d6ebe593a5439e6828->enter($__internal_f198dd603e2425a368af72998cdc90e6b9cd47a8e9cb50d6ebe593a5439e6828_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AppBundle:Person:new_person.html.twig"));
+        $__internal_e7a0625be23223c94f853d06bc7e7e556258b2f46566eb7935611f7f71256982 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e7a0625be23223c94f853d06bc7e7e556258b2f46566eb7935611f7f71256982->enter($__internal_e7a0625be23223c94f853d06bc7e7e556258b2f46566eb7935611f7f71256982_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AppBundle:Person:new_person.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f198dd603e2425a368af72998cdc90e6b9cd47a8e9cb50d6ebe593a5439e6828->leave($__internal_f198dd603e2425a368af72998cdc90e6b9cd47a8e9cb50d6ebe593a5439e6828_prof);
+        $__internal_e7a0625be23223c94f853d06bc7e7e556258b2f46566eb7935611f7f71256982->leave($__internal_e7a0625be23223c94f853d06bc7e7e556258b2f46566eb7935611f7f71256982_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_fb0b2108163dea0708ce5a649170a4cb46f95f463f78079b5925435c12cea6d2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_fb0b2108163dea0708ce5a649170a4cb46f95f463f78079b5925435c12cea6d2->enter($__internal_fb0b2108163dea0708ce5a649170a4cb46f95f463f78079b5925435c12cea6d2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_98ac935588cd95b19b379931981261b4bab541b7e525ffd2539a0d821d9f56ed = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_98ac935588cd95b19b379931981261b4bab541b7e525ffd2539a0d821d9f56ed->enter($__internal_98ac935588cd95b19b379931981261b4bab541b7e525ffd2539a0d821d9f56ed_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "AppBundle:Person:newPerson";
         
-        $__internal_fb0b2108163dea0708ce5a649170a4cb46f95f463f78079b5925435c12cea6d2->leave($__internal_fb0b2108163dea0708ce5a649170a4cb46f95f463f78079b5925435c12cea6d2_prof);
+        $__internal_98ac935588cd95b19b379931981261b4bab541b7e525ffd2539a0d821d9f56ed->leave($__internal_98ac935588cd95b19b379931981261b4bab541b7e525ffd2539a0d821d9f56ed_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_f0de8944e80b77d5679d5edac3986388798136564f24a2c1cc33c0a96601a8f1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f0de8944e80b77d5679d5edac3986388798136564f24a2c1cc33c0a96601a8f1->enter($__internal_f0de8944e80b77d5679d5edac3986388798136564f24a2c1cc33c0a96601a8f1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_ebc1dd56de04cdcbbb05db09962f758f7fb7d45acb02cf56be95b9eacdab245a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ebc1dd56de04cdcbbb05db09962f758f7fb7d45acb02cf56be95b9eacdab245a->enter($__internal_ebc1dd56de04cdcbbb05db09962f758f7fb7d45acb02cf56be95b9eacdab245a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "<h1>Welcome to the Person:newPerson page</h1>
@@ -58,33 +58,27 @@ class __TwigTemplate_b3f38f02ac5af725d1a0ef3406abba444811ddf8f5dfcfecb44c9a64611
         echo "
 ";
         // line 9
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "city", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Miasto")));
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "name", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Podaj imię")));
         echo "
 ";
         // line 10
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "street", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Ulica")));
-        echo "
-";
-        // line 11
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "number1", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "NUmer 1")));
-        echo "
-";
-        // line 12
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "number2", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Numer 2")));
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "surname", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Podaj nazwisko")));
         echo "
 <br>
 ";
-        // line 14
+        // line 12
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "save", array()), 'widget', array("attr" => array("class" => "btn btn-success btn-xs")));
         echo "
 ";
-        // line 15
+        // line 13
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
         echo "
 
+<a class=\"btn btn-primary btn-xs\" href=\"/showAll\">Wróć do listy</a>
+
 ";
         
-        $__internal_f0de8944e80b77d5679d5edac3986388798136564f24a2c1cc33c0a96601a8f1->leave($__internal_f0de8944e80b77d5679d5edac3986388798136564f24a2c1cc33c0a96601a8f1_prof);
+        $__internal_ebc1dd56de04cdcbbb05db09962f758f7fb7d45acb02cf56be95b9eacdab245a->leave($__internal_ebc1dd56de04cdcbbb05db09962f758f7fb7d45acb02cf56be95b9eacdab245a_prof);
 
     }
 
@@ -100,7 +94,7 @@ class __TwigTemplate_b3f38f02ac5af725d1a0ef3406abba444811ddf8f5dfcfecb44c9a64611
 
     public function getDebugInfo()
     {
-        return array (  82 => 15,  78 => 14,  73 => 12,  69 => 11,  65 => 10,  61 => 9,  57 => 8,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
+        return array (  74 => 13,  70 => 12,  65 => 10,  61 => 9,  57 => 8,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -121,13 +115,13 @@ class __TwigTemplate_b3f38f02ac5af725d1a0ef3406abba444811ddf8f5dfcfecb44c9a64611
 <h1>Welcome to the Person:newPerson page</h1>
 
 {{ form_start(form,{'attr':{'class':'form-group jumbotron'} }) }}
-{{ form_widget(form.city,{'attr':{'class':'form-control','placeholder':'Miasto'} }) }}
-{{ form_widget(form.street,{'attr':{'class':'form-control','placeholder':'Ulica'} }) }}
-{{ form_widget(form.number1,{'attr':{'class':'form-control','placeholder':'NUmer 1'} }) }}
-{{ form_widget(form.number2,{'attr':{'class':'form-control','placeholder':'Numer 2'} }) }}
+{{ form_widget(form.name,{'attr':{'class':'form-control','placeholder':'Podaj imię'} }) }}
+{{ form_widget(form.surname,{'attr':{'class':'form-control','placeholder':'Podaj nazwisko'} }) }}
 <br>
 {{ form_widget(form.save,{'attr':{'class':'btn btn-success btn-xs'} }) }}
 {{ form_end(form) }}
+
+<a class=\"btn btn-primary btn-xs\" href=\"/showAll\">Wróć do listy</a>
 
 {% endblock %}
 ", "AppBundle:Person:new_person.html.twig", "/Users/mateusz/Desktop/php/ContactsApp/src/AppBundle/Resources/views/Person/new_person.html.twig");

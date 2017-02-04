@@ -22,35 +22,35 @@ class __TwigTemplate_80545b4827b1467e644cc07bb42603050ca2bee4e15da4921891ee7a18e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0e6a1eb86c16adc62b2e99376770a1e682ef0abf9c136739754378a3a3cc3833 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0e6a1eb86c16adc62b2e99376770a1e682ef0abf9c136739754378a3a3cc3833->enter($__internal_0e6a1eb86c16adc62b2e99376770a1e682ef0abf9c136739754378a3a3cc3833_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AppBundle:Person:modify.html.twig"));
+        $__internal_43879fd56cf89ca7d4ebd10b24138968ae6da177e8aec50529ae2d8bc3363d58 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_43879fd56cf89ca7d4ebd10b24138968ae6da177e8aec50529ae2d8bc3363d58->enter($__internal_43879fd56cf89ca7d4ebd10b24138968ae6da177e8aec50529ae2d8bc3363d58_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AppBundle:Person:modify.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_0e6a1eb86c16adc62b2e99376770a1e682ef0abf9c136739754378a3a3cc3833->leave($__internal_0e6a1eb86c16adc62b2e99376770a1e682ef0abf9c136739754378a3a3cc3833_prof);
+        $__internal_43879fd56cf89ca7d4ebd10b24138968ae6da177e8aec50529ae2d8bc3363d58->leave($__internal_43879fd56cf89ca7d4ebd10b24138968ae6da177e8aec50529ae2d8bc3363d58_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_76abd7b4294f545f1c3854b56fbe33e9f2793fc76b220bdd00bdc30629fc4e1e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_76abd7b4294f545f1c3854b56fbe33e9f2793fc76b220bdd00bdc30629fc4e1e->enter($__internal_76abd7b4294f545f1c3854b56fbe33e9f2793fc76b220bdd00bdc30629fc4e1e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_95e0a685e4ef09f1bc4d852ca3ce843564d9ea72ae1e140d4e4c401efc5656e2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_95e0a685e4ef09f1bc4d852ca3ce843564d9ea72ae1e140d4e4c401efc5656e2->enter($__internal_95e0a685e4ef09f1bc4d852ca3ce843564d9ea72ae1e140d4e4c401efc5656e2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "AppBundle:Person:modify";
         
-        $__internal_76abd7b4294f545f1c3854b56fbe33e9f2793fc76b220bdd00bdc30629fc4e1e->leave($__internal_76abd7b4294f545f1c3854b56fbe33e9f2793fc76b220bdd00bdc30629fc4e1e_prof);
+        $__internal_95e0a685e4ef09f1bc4d852ca3ce843564d9ea72ae1e140d4e4c401efc5656e2->leave($__internal_95e0a685e4ef09f1bc4d852ca3ce843564d9ea72ae1e140d4e4c401efc5656e2_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_b558d334071d31a85a04115fe4144586ad8102775d5852f9df8654719020f730 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b558d334071d31a85a04115fe4144586ad8102775d5852f9df8654719020f730->enter($__internal_b558d334071d31a85a04115fe4144586ad8102775d5852f9df8654719020f730_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_391346e98c96cdfa884974bcf9bb160c41bf08925482a9a7c15825781d676066 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_391346e98c96cdfa884974bcf9bb160c41bf08925482a9a7c15825781d676066->enter($__internal_391346e98c96cdfa884974bcf9bb160c41bf08925482a9a7c15825781d676066_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<h1>Welcome to the Person:modify page</h1>
+        echo "<h1>Edycja kontaktu</h1>
 
 ";
         // line 8
@@ -76,7 +76,7 @@ class __TwigTemplate_80545b4827b1467e644cc07bb42603050ca2bee4e15da4921891ee7a18e
 
 ";
         
-        $__internal_b558d334071d31a85a04115fe4144586ad8102775d5852f9df8654719020f730->leave($__internal_b558d334071d31a85a04115fe4144586ad8102775d5852f9df8654719020f730_prof);
+        $__internal_391346e98c96cdfa884974bcf9bb160c41bf08925482a9a7c15825781d676066->leave($__internal_391346e98c96cdfa884974bcf9bb160c41bf08925482a9a7c15825781d676066_prof);
 
     }
 
@@ -110,7 +110,7 @@ class __TwigTemplate_80545b4827b1467e644cc07bb42603050ca2bee4e15da4921891ee7a18e
 {% block title %}AppBundle:Person:modify{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Person:modify page</h1>
+<h1>Edycja kontaktu</h1>
 
 {{ form_start(form,{'attr':{'class':'form-group jumbotron'} }) }}
 {{ form_widget(form.name,{'attr':{'class':'form-control','placeholder':'Podaj imię'} }) }}

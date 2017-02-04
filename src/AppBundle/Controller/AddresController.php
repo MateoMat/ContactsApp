@@ -9,17 +9,16 @@ use AppBundle\Entity\Person;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class AddresController extends Controller
-{
+class AddresController extends Controller {
+
     /**
      * @Route("/newAddres",name="newAddres")
      */
-    public function newAddresAction(Request $request)
-    {
+    public function newAddresAction(Request $request) {
         $addres = new Addres();
-        $url=$this->generateUrl('newAddres');
-        $form=$this->createAddresAction($addres, $url);
-        
+        $url = $this->generateUrl('newAddres');
+        $form = $this->createAddresAction($addres, $url);
+
 
 
         $form->handleRequest($request);
@@ -31,15 +30,14 @@ class AddresController extends Controller
             $em->persist($newAddres);
             $em->flush();
 
-            return new \Symfony\Component\HttpFoundation\RedirectResponse('/showAll');
+            return new \Symfony\Component\HttpFoundation\RedirectResponse('/addEmail');
         }
-        
+
         return $this->render('AppBundle:Addres:new_addres.html.twig', array(
-            'form'=>$form->createView()
+                    'form' => $form->createView()
         ));
     }
-    
-    
+
     private function createAddresAction(Addres $addres, $url) {
 
 
@@ -51,46 +49,38 @@ class AddresController extends Controller
                     'label' => 'Podaj nazwisko'
                 ))
                 ->add('number1', 'text')
-                ->add('number2', 'text')
-                ->add('person','entity',array('class'=>'AppBundle:Person'))
+                ->add('number2', 'text',array('required'=>false))
+                ->add('person', 'entity', array('class' => 'AppBundle:Person'))
                 ->add('save', 'submit', array('label' => 'Zapisz użytkownika'))
                 ->getForm();
 
         return $form;
     }
-    
-    
-    
-    
-    
 
     /**
      * @Route("/editAddres/{id}")
      */
-    public function editAddresAction($id)
-    {
+    public function editAddresAction($id) {
         return $this->render('AppBundle:Addres:edit_addres.html.twig', array(
-            // ...
+                        // ...
         ));
     }
 
     /**
      * @Route("/deleteAddres/{id}")
      */
-    public function deleteAddresAction($id)
-    {
+    public function deleteAddresAction($id) {
         return $this->render('AppBundle:Addres:delete_addres.html.twig', array(
-            // ...
+                        // ...
         ));
     }
 
     /**
      * @Route("/showAllAddres")
      */
-    public function showAllAddresAction()
-    {
+    public function showAllAddresAction() {
         return $this->render('AppBundle:Addres:show_all_addres.html.twig', array(
-            // ...
+                        // ...
         ));
     }
 

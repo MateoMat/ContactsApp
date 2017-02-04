@@ -52,7 +52,7 @@ class Addres
     /**
      * @var string
      *
-     * @ORM\Column(name="number2", type="string", length=255)
+     * @ORM\Column(name="number2", type="string", length=255,nullable=true)
      */
     private $number2;
 
@@ -181,4 +181,9 @@ class Addres
     {
         return $this->person;
     }
+    
+    public function __toString() {
+        return $this->city. ' '.$this->street;
+    }
+    
 }

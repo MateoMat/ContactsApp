@@ -13,6 +13,7 @@ use AppBundle\Entity\Addres;
 use AppBundle\Entity\Email;
 use AppBundle\Entity\Phone;
 
+
 class PersonController extends Controller {
 
     /**
@@ -34,7 +35,7 @@ class PersonController extends Controller {
             $em->persist($newPerson);
             $em->flush();
 
-            return new \Symfony\Component\HttpFoundation\RedirectResponse('/showAll');
+            return new \Symfony\Component\HttpFoundation\RedirectResponse('/newAddres');
         }
 
 
@@ -54,6 +55,7 @@ class PersonController extends Controller {
                     'required' => true,
                     'label' => 'Podaj nazwisko'
                 ))
+                
                 ->add('save', 'submit', array('label' => 'Zapisz użytkownika'))
                 ->getForm();
 
@@ -113,7 +115,7 @@ class PersonController extends Controller {
         $em = $this->getDoctrine()->getRepository("AppBundle:Person");
         $persons = $em->findAll();
         if (!$persons) {
-            throw new \Symfony\Component\Translation\Exception\NotFoundResourceException('Nie ma');
+            throw new \Symfony\Component\Translation\Exception\NotFoundResourceException('Wystąpił błąd w metodzie showAllActions');
         }
 
 
@@ -128,13 +130,16 @@ class PersonController extends Controller {
     public function showPersonAction($id) {
         $em = $this->getDoctrine()->getRepository("AppBundle:Person");
         $person = $em->find($id);
+        $addres=$person->getAddres();
+        
         if (!$person) {
-            throw new \Symfony\Component\Translation\Exception\NotFoundResourceException('Nie ma');
+            throw new \Symfony\Component\Translation\Exception\NotFoundResourceException('Nie ma takiego kontaktu');
         }
 
 
         return $this->render('AppBundle:Person:show_person.html.twig', array(
-                    'person' => $person
+                    'person' => $person,
+                'addres'=>$addres
         ));
     }
 

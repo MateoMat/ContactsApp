@@ -1,0 +1,16 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:Email:addEmail{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Email:addEmail page</h1>
+
+{{ form_start(form,{'attr':{'class':'form-group jumbotron'} }) }}
+{{ form_widget(form.person,{'attr':{'class':'form-control','placeholder':'Podaj imię'} }) }}
+{{ form_widget(form.email,{'attr':{'class':'form-control','placeholder':'Podaj email'} }) }}
+{{ form_widget(form.type,{'attr':{'class':'form-control','placeholder':'Rodzaj adresu'} }) }}
+<br>
+{{ form_widget(form.save,{'attr':{'class':'btn btn-success btn-xs'} }) }}
+{{ form_end(form) }}
+
+{% endblock %}

@@ -22,86 +22,74 @@ class __TwigTemplate_7bc053d2f1a4e335ff0563a69304e4b0358fe0149d0fe0a5435f59eb365
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ae18999cf12cc91d1521429d10f30ca76b136ff7d3efa6d07bd2c61bc9ffb2f7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ae18999cf12cc91d1521429d10f30ca76b136ff7d3efa6d07bd2c61bc9ffb2f7->enter($__internal_ae18999cf12cc91d1521429d10f30ca76b136ff7d3efa6d07bd2c61bc9ffb2f7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AppBundle:Person:show_all.html.twig"));
+        $__internal_2eff630dabd1037a77a5c72ecec36e53750d409a276e720c78bb10e353172090 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2eff630dabd1037a77a5c72ecec36e53750d409a276e720c78bb10e353172090->enter($__internal_2eff630dabd1037a77a5c72ecec36e53750d409a276e720c78bb10e353172090_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AppBundle:Person:show_all.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_ae18999cf12cc91d1521429d10f30ca76b136ff7d3efa6d07bd2c61bc9ffb2f7->leave($__internal_ae18999cf12cc91d1521429d10f30ca76b136ff7d3efa6d07bd2c61bc9ffb2f7_prof);
+        $__internal_2eff630dabd1037a77a5c72ecec36e53750d409a276e720c78bb10e353172090->leave($__internal_2eff630dabd1037a77a5c72ecec36e53750d409a276e720c78bb10e353172090_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_9e7c06f9781654a9a3aac4b65f280d073c49f3108e60c41786eda355f08735dc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9e7c06f9781654a9a3aac4b65f280d073c49f3108e60c41786eda355f08735dc->enter($__internal_9e7c06f9781654a9a3aac4b65f280d073c49f3108e60c41786eda355f08735dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_e59a6aec6efa3959972f4ff24c2b9a4e422ad04e5a36bab8a8c2b87c2196ed8d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e59a6aec6efa3959972f4ff24c2b9a4e422ad04e5a36bab8a8c2b87c2196ed8d->enter($__internal_e59a6aec6efa3959972f4ff24c2b9a4e422ad04e5a36bab8a8c2b87c2196ed8d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Lista wszystkich osób";
         
-        $__internal_9e7c06f9781654a9a3aac4b65f280d073c49f3108e60c41786eda355f08735dc->leave($__internal_9e7c06f9781654a9a3aac4b65f280d073c49f3108e60c41786eda355f08735dc_prof);
+        $__internal_e59a6aec6efa3959972f4ff24c2b9a4e422ad04e5a36bab8a8c2b87c2196ed8d->leave($__internal_e59a6aec6efa3959972f4ff24c2b9a4e422ad04e5a36bab8a8c2b87c2196ed8d_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_22f86054b68a887acb9300f6c939f4d234efb3a3e624b953d2f2340988003b02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_22f86054b68a887acb9300f6c939f4d234efb3a3e624b953d2f2340988003b02->enter($__internal_22f86054b68a887acb9300f6c939f4d234efb3a3e624b953d2f2340988003b02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_9232853c293151415edbac29077c8efcbe81c0b765769a9117c115d1a4472b60 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9232853c293151415edbac29077c8efcbe81c0b765769a9117c115d1a4472b60->enter($__internal_9232853c293151415edbac29077c8efcbe81c0b765769a9117c115d1a4472b60_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Lista wszystkich osób</h1>
+        echo "<div class=\"jumbotron\">
+    <h1>Lista wszystkich osób</h1>
 
+    <a class=\"btn btn-info btn-xs\" href=\"/\">Strona główna</a>
+    <a class=\"btn btn-info btn-xs\" href=\"/newPerson\">Dodaj osobę</a>
+    <a class=\"btn btn-info btn-xs\" href=\"/newAddres\">Dodaj adres</a>
+    <a class=\"btn btn-info btn-xs\" href=\"/addEmail\">Dodaj email</a>
+</div>
     ";
-        // line 8
+        // line 14
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["persons"] ?? $this->getContext($context, "persons")));
         foreach ($context['_seq'] as $context["_key"] => $context["person"]) {
-            // line 9
+            // line 15
             echo "
-            <p>";
-            // line 10
+        <p><b>";
+            // line 16
             echo twig_escape_filter($this->env, $this->getAttribute($context["person"], "name", array()), "html", null, true);
             echo "
                 ";
-            // line 11
+            // line 17
             echo twig_escape_filter($this->env, $this->getAttribute($context["person"], "surname", array()), "html", null, true);
-            echo "</p>
-
-            ";
-            // line 13
-            if ($this->getAttribute($context["person"], "addres", array(), "any", true, true)) {
-                // line 14
-                echo "                ";
-                $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["person"], "addres", array()));
-                foreach ($context['_seq'] as $context["_key"] => $context["address"]) {
-                    // line 15
-                    echo "                    <p>";
-                    echo twig_escape_filter($this->env, $this->getAttribute($context["address"], "city", array()), "html", null, true);
-                    echo "</p>
-                    ";
-                    // line 16
-                    echo twig_escape_filter($this->env, $this->getAttribute($context["address"], "street", array()), "html", null, true);
-                    echo "</p>
-                    ";
-                }
-                $_parent = $context['_parent'];
-                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['address'], $context['_parent'], $context['loop']);
-                $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 18
-                echo "            ";
-            }
-            // line 19
-            echo "
-            <a class=\"btn btn-primary btn-xs\" href=\"/delete/";
-            // line 20
+            echo " ";
             echo twig_escape_filter($this->env, $this->getAttribute($context["person"], "id", array()), "html", null, true);
-            echo "\">Usuń</a>
-            <a class=\"btn btn-primary btn-xs\" href=\"/edit/";
+            echo "</b></p>
+
+
+
+        <a class=\"btn btn-primary btn-xs\" href=\"/show/";
             // line 21
             echo twig_escape_filter($this->env, $this->getAttribute($context["person"], "id", array()), "html", null, true);
+            echo "\">Szczegóły</a>
+        <a class=\"btn btn-primary btn-xs\" href=\"/edit/";
+            // line 22
+            echo twig_escape_filter($this->env, $this->getAttribute($context["person"], "id", array()), "html", null, true);
             echo "\">Zmień</a>
+        <a class=\"btn btn-primary btn-xs\" href=\"/delete/";
+            // line 23
+            echo twig_escape_filter($this->env, $this->getAttribute($context["person"], "id", array()), "html", null, true);
+            echo "\">Usuń</a>
         <hr>
 
     ";
@@ -109,8 +97,13 @@ class __TwigTemplate_7bc053d2f1a4e335ff0563a69304e4b0358fe0149d0fe0a5435f59eb365
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['person'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 27
+        echo "
+
+
+";
         
-        $__internal_22f86054b68a887acb9300f6c939f4d234efb3a3e624b953d2f2340988003b02->leave($__internal_22f86054b68a887acb9300f6c939f4d234efb3a3e624b953d2f2340988003b02_prof);
+        $__internal_9232853c293151415edbac29077c8efcbe81c0b765769a9117c115d1a4472b60->leave($__internal_9232853c293151415edbac29077c8efcbe81c0b765769a9117c115d1a4472b60_prof);
 
     }
 
@@ -126,7 +119,7 @@ class __TwigTemplate_7bc053d2f1a4e335ff0563a69304e4b0358fe0149d0fe0a5435f59eb365
 
     public function getDebugInfo()
     {
-        return array (  103 => 21,  99 => 20,  96 => 19,  93 => 18,  85 => 16,  80 => 15,  75 => 14,  73 => 13,  68 => 11,  64 => 10,  61 => 9,  57 => 8,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
+        return array (  101 => 27,  91 => 23,  87 => 22,  83 => 21,  74 => 17,  70 => 16,  67 => 15,  63 => 14,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -144,25 +137,30 @@ class __TwigTemplate_7bc053d2f1a4e335ff0563a69304e4b0358fe0149d0fe0a5435f59eb365
 {% block title %}Lista wszystkich osób{% endblock %}
 
 {% block body %}
+<div class=\"jumbotron\">
     <h1>Lista wszystkich osób</h1>
 
+    <a class=\"btn btn-info btn-xs\" href=\"/\">Strona główna</a>
+    <a class=\"btn btn-info btn-xs\" href=\"/newPerson\">Dodaj osobę</a>
+    <a class=\"btn btn-info btn-xs\" href=\"/newAddres\">Dodaj adres</a>
+    <a class=\"btn btn-info btn-xs\" href=\"/addEmail\">Dodaj email</a>
+</div>
     {% for person in persons %}
 
-            <p>{{ person.name }}
-                {{ person.surname }}</p>
+        <p><b>{{ person.name }}
+                {{ person.surname }} {{ person.id }}</b></p>
 
-            {% if person.addres is defined %}
-                {% for address in person.addres %}
-                    <p>{{ address.city }}</p>
-                    {{ address.street }}</p>
-                    {% endfor %}
-            {% endif %}
 
-            <a class=\"btn btn-primary btn-xs\" href=\"/delete/{{ person.id }}\">Usuń</a>
-            <a class=\"btn btn-primary btn-xs\" href=\"/edit/{{ person.id }}\">Zmień</a>
+
+        <a class=\"btn btn-primary btn-xs\" href=\"/show/{{ person.id }}\">Szczegóły</a>
+        <a class=\"btn btn-primary btn-xs\" href=\"/edit/{{ person.id }}\">Zmień</a>
+        <a class=\"btn btn-primary btn-xs\" href=\"/delete/{{ person.id }}\">Usuń</a>
         <hr>
 
     {% endfor %}
+
+
+
 {% endblock %}
 ", "AppBundle:Person:show_all.html.twig", "/Users/mateusz/Desktop/php/ContactsApp/src/AppBundle/Resources/views/Person/show_all.html.twig");
     }

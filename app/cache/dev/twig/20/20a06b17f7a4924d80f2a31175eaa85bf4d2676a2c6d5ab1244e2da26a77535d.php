@@ -22,32 +22,32 @@ class __TwigTemplate_0b7cac8442778af9e9cc27740c13f2f6ac6fd60d8faa669634dff80e1ab
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5eb6eb3d49c85e21b6fdcdf5066f58591b617da214f4644f3b4cd6afdd9da346 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5eb6eb3d49c85e21b6fdcdf5066f58591b617da214f4644f3b4cd6afdd9da346->enter($__internal_5eb6eb3d49c85e21b6fdcdf5066f58591b617da214f4644f3b4cd6afdd9da346_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AppBundle:Addres:new_addres.html.twig"));
+        $__internal_25cc5898ac7f01eab3088ebe00987aebd0b0d77ef02c72ea4bf5b910e4510122 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_25cc5898ac7f01eab3088ebe00987aebd0b0d77ef02c72ea4bf5b910e4510122->enter($__internal_25cc5898ac7f01eab3088ebe00987aebd0b0d77ef02c72ea4bf5b910e4510122_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AppBundle:Addres:new_addres.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_5eb6eb3d49c85e21b6fdcdf5066f58591b617da214f4644f3b4cd6afdd9da346->leave($__internal_5eb6eb3d49c85e21b6fdcdf5066f58591b617da214f4644f3b4cd6afdd9da346_prof);
+        $__internal_25cc5898ac7f01eab3088ebe00987aebd0b0d77ef02c72ea4bf5b910e4510122->leave($__internal_25cc5898ac7f01eab3088ebe00987aebd0b0d77ef02c72ea4bf5b910e4510122_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_d49bb185eb25e55ffaae0cd94966235d6c7b85ce28f43e53bdab6e2f9b4f9ded = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d49bb185eb25e55ffaae0cd94966235d6c7b85ce28f43e53bdab6e2f9b4f9ded->enter($__internal_d49bb185eb25e55ffaae0cd94966235d6c7b85ce28f43e53bdab6e2f9b4f9ded_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_96e110bfa3df63c7dbd9e73f509cfcf28753b52abc3b17ee1f944a0af7c77dbb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_96e110bfa3df63c7dbd9e73f509cfcf28753b52abc3b17ee1f944a0af7c77dbb->enter($__internal_96e110bfa3df63c7dbd9e73f509cfcf28753b52abc3b17ee1f944a0af7c77dbb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "AppBundle:Addres:newAddres";
         
-        $__internal_d49bb185eb25e55ffaae0cd94966235d6c7b85ce28f43e53bdab6e2f9b4f9ded->leave($__internal_d49bb185eb25e55ffaae0cd94966235d6c7b85ce28f43e53bdab6e2f9b4f9ded_prof);
+        $__internal_96e110bfa3df63c7dbd9e73f509cfcf28753b52abc3b17ee1f944a0af7c77dbb->leave($__internal_96e110bfa3df63c7dbd9e73f509cfcf28753b52abc3b17ee1f944a0af7c77dbb_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_da606b5b8e78fa2a69b691d9c46f3c704680470ecaa0c4ecfdcd0eb19210b219 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_da606b5b8e78fa2a69b691d9c46f3c704680470ecaa0c4ecfdcd0eb19210b219->enter($__internal_da606b5b8e78fa2a69b691d9c46f3c704680470ecaa0c4ecfdcd0eb19210b219_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_55043b19bbed74ee9e4385c6fb879fe2272e1c82ecb0199dc5afb35f3cac5e98 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_55043b19bbed74ee9e4385c6fb879fe2272e1c82ecb0199dc5afb35f3cac5e98->enter($__internal_55043b19bbed74ee9e4385c6fb879fe2272e1c82ecb0199dc5afb35f3cac5e98_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "<h1>Welcome to the Addres:newAddres page</h1>
@@ -86,9 +86,11 @@ class __TwigTemplate_0b7cac8442778af9e9cc27740c13f2f6ac6fd60d8faa669634dff80e1ab
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
         echo "
 
+<a class=\"btn btn-primary btn-xs\" href=\"/showAll\">Wróć do listy</a>
+
 ";
         
-        $__internal_da606b5b8e78fa2a69b691d9c46f3c704680470ecaa0c4ecfdcd0eb19210b219->leave($__internal_da606b5b8e78fa2a69b691d9c46f3c704680470ecaa0c4ecfdcd0eb19210b219_prof);
+        $__internal_55043b19bbed74ee9e4385c6fb879fe2272e1c82ecb0199dc5afb35f3cac5e98->leave($__internal_55043b19bbed74ee9e4385c6fb879fe2272e1c82ecb0199dc5afb35f3cac5e98_prof);
 
     }
 
@@ -133,6 +135,8 @@ class __TwigTemplate_0b7cac8442778af9e9cc27740c13f2f6ac6fd60d8faa669634dff80e1ab
 <br>
 {{ form_widget(form.save,{'attr':{'class':'btn btn-success btn-xs'} }) }}
 {{ form_end(form) }}
+
+<a class=\"btn btn-primary btn-xs\" href=\"/showAll\">Wróć do listy</a>
 
 {% endblock %}
 ", "AppBundle:Addres:new_addres.html.twig", "/Users/mateusz/Desktop/php/ContactsApp/src/AppBundle/Resources/views/Addres/new_addres.html.twig");

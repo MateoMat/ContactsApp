@@ -1,11 +1,29 @@
 {% extends "::base.html.twig" %}
 
-{% block title %}AppBundle:Person:showPerson{% endblock %}
+{% block title %}Szczegóły kontaktu :{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Person:showPerson page</h1>
+    <h1 class="jumbotron">Szczegółowe dane o kontakcie:</h1><br>
 
-<p>{{ person.name }}</p>
-<p>{{ person.surname }}</p>
+    <p>{{ person.name }} {{ person.surname }} {{ person.id }}</p>
+
+    {% if person.addres is defined %}
+        {% for address in person.addres %}
+            <p>{{ address.city }}</p>
+            {{ address.street }} {{ address.number1 }} 
+            {% if address.number2 %}
+                /{{ address.number2 }}
+            {% endif %}</p>
+    {% endfor %}
+
+{% if person.email is defined %}
+    {% for emails in person.email %}
+        <p>{{ emails.email }}</p>
+
+    {% endfor %}
+{% endif %}
+{% endif %}
+
+<a href="/showAll" class="btn btn-primary">Wróć na listę</a>
 
 {% endblock %}

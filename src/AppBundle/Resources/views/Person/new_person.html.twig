@@ -6,12 +6,12 @@
 <h1>Welcome to the Person:newPerson page</h1>
 
 {{ form_start(form,{'attr':{'class':'form-group jumbotron'} }) }}
-{{ form_widget(form.city,{'attr':{'class':'form-control','placeholder':'Miasto'} }) }}
-{{ form_widget(form.street,{'attr':{'class':'form-control','placeholder':'Ulica'} }) }}
-{{ form_widget(form.number1,{'attr':{'class':'form-control','placeholder':'NUmer 1'} }) }}
-{{ form_widget(form.number2,{'attr':{'class':'form-control','placeholder':'Numer 2'} }) }}
+{{ form_widget(form.name,{'attr':{'class':'form-control','placeholder':'Podaj imię'} }) }}
+{{ form_widget(form.surname,{'attr':{'class':'form-control','placeholder':'Podaj nazwisko'} }) }}
 <br>
 {{ form_widget(form.save,{'attr':{'class':'btn btn-success btn-xs'} }) }}
 {{ form_end(form) }}
+
+<a class="btn btn-primary btn-xs" href="/showAll">Wróć do listy</a>
 
 {% endblock %}

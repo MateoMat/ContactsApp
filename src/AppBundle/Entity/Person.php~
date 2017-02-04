@@ -37,7 +37,7 @@ class Person
     
     /**
      *
-     * @ORM\OneToMany(targetEntity="Addres", mappedBy="person")
+     * @ORM\OneToMany(targetEntity="Addres", mappedBy="person",cascade={"remove"})
      */
     private $addres;
     
@@ -57,7 +57,7 @@ class Person
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=255)
+     * @ORM\Column(name="description", type="string", length=255, nullable=true)
      */
     private $description;
 
@@ -214,5 +214,42 @@ class Person
     public function getPhone()
     {
         return $this->phone;
+    }
+
+    /**
+     * Add email
+     *
+     * @param \AppBundle\Entity\Email $email
+     * @return Person
+     */
+    public function addEmail(\AppBundle\Entity\Email $email)
+    {
+        $this->email[] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Remove email
+     *
+     * @param \AppBundle\Entity\Email $email
+     */
+    public function removeEmail(\AppBundle\Entity\Email $email)
+    {
+        $this->email->removeElement($email);
+    }
+
+    /**
+     * Get email
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+    
+    public function __toString() {
+        return $this->name. ' '.$this->surname;
     }
 }

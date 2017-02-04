@@ -134,6 +134,21 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
         }
 
+        // addEmail
+        if ($pathinfo === '/addEmail') {
+            return array (  '_controller' => 'AppBundle\\Controller\\EmailController::addEmailAction',  '_route' => 'addEmail',);
+        }
+
+        // app_email_editemail
+        if (0 === strpos($pathinfo, '/editEmail') && preg_match('#^/editEmail/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_email_editemail')), array (  '_controller' => 'AppBundle\\Controller\\EmailController::editEmailAction',));
+        }
+
+        // app_email_deleteemail
+        if (0 === strpos($pathinfo, '/deleteEmail') && preg_match('#^/deleteEmail/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_email_deleteemail')), array (  '_controller' => 'AppBundle\\Controller\\EmailController::deleteEmailAction',));
+        }
+
         // newPerson
         if ($pathinfo === '/newPerson') {
             return array (  '_controller' => 'AppBundle\\Controller\\PersonController::newPersonAction',  '_route' => 'newPerson',);
