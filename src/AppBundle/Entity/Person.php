@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraint as Assert;
 
 /**
  * Person
@@ -23,6 +24,13 @@ class Person
 
     /**
      * @var string
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     * min=3,
+     * max=3,
+     * minMessage="za krótkie",
+     * maxMessage="za długie"
+     * )
      *
      * @ORM\Column(name="name", type="string", length=255)
      */

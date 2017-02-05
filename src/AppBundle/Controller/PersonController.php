@@ -13,7 +13,6 @@ use AppBundle\Entity\Addres;
 use AppBundle\Entity\Email;
 use AppBundle\Entity\Phone;
 
-
 class PersonController extends Controller {
 
     /**
@@ -21,16 +20,24 @@ class PersonController extends Controller {
      */
     public function newPersonAction(Request $request) {
         $person = new Person();
-        $url=$this->generateUrl('newPerson');
-        $form=$this->createPersonAction($person, $url);
-        
+        $url = $this->generateUrl('newPerson');
+        $form = $this->createPersonAction($person, $url);
+
 
 
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
+
+
+        if ($form->isSubmitted()) {
 
             $newPerson = $form->getData();
+            $validator = $this->get('validator');
+            $errors = $validator->validate($newPerson);
+            if (count($errors) > 0) {
+                return new Response('Jest bład');
+            }
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($newPerson);
             $em->flush();
@@ -45,6 +52,8 @@ class PersonController extends Controller {
         ));
     }
 
+    
+
     private function createPersonAction(Person $person, $url) {
 
 
@@ -55,7 +64,6 @@ class PersonController extends Controller {
                     'required' => true,
                     'label' => 'Podaj nazwisko'
                 ))
-                
                 ->add('save', 'submit', array('label' => 'Zapisz użytkownika'))
                 ->getForm();
 
@@ -65,27 +73,27 @@ class PersonController extends Controller {
     /**
      * @Route("edit/{id}",name="edit")
      */
-    public function modifyAction(Request $req,$id) {
+    public function modifyAction(Request $req, $id) {
         $em = $this->getDoctrine()->getRepository('AppBundle:Person');
         $person = $em->find($id);
-        $url=$this->generateUrl('edit',array('id'=>$id));
-        $form=$this->createPersonAction($person, $url);
-        
+        $url = $this->generateUrl('edit', array('id' => $id));
+        $form = $this->createPersonAction($person, $url);
+
         $form->handleRequest($req);
-        
-        if($form->isSubmitted()){
-            $em=$this->getDoctrine()->getManager();
-            
+
+        if ($form->isSubmitted()) {
+            $em = $this->getDoctrine()->getManager();
+
             $em->flush();
-            
+
             return $this->redirect($this->generateUrl('showAll'));
         }
-        
+
 
 
 
         return $this->render('AppBundle:Person:modify.html.twig', array(
-            'form'=>$form->createView()
+                    'form' => $form->createView()
         ));
     }
 
@@ -94,16 +102,16 @@ class PersonController extends Controller {
      */
     public function deleteAction($id) {
 
-        
+
         $person = $this->getDoctrine()->getRepository("AppBundle:Person")->findOneById($id);
 
-        if(!$person){
+        if (!$person) {
             throw new Exception('Tu jest błąd');
         }
         $em = $this->getDoctrine()->getManager();
         $em->remove($person);
         $em->flush();
-        
+
 
         return $this->redirect($this->generateUrl('showAll'));
     }
@@ -130,8 +138,8 @@ class PersonController extends Controller {
     public function showPersonAction($id) {
         $em = $this->getDoctrine()->getRepository("AppBundle:Person");
         $person = $em->find($id);
-        $addres=$person->getAddres();
-        
+        $addres = $person->getAddres();
+
         if (!$person) {
             throw new \Symfony\Component\Translation\Exception\NotFoundResourceException('Nie ma takiego kontaktu');
         }
@@ -139,7 +147,7 @@ class PersonController extends Controller {
 
         return $this->render('AppBundle:Person:show_person.html.twig', array(
                     'person' => $person,
-                'addres'=>$addres
+                    'addres' => $addres
         ));
     }
 
