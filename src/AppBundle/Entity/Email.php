@@ -24,7 +24,7 @@ class Email
     /**
      *
      * @ORM\ManyToOne(targetEntity="Person",inversedBy="email")
-     * @ORM\JoinColumn(name="person_id",referencedColumnName="id")
+     * @ORM\JoinColumn(name="person_id",referencedColumnName="id",onDelete="CASCADE")
      */
     private $person;
 

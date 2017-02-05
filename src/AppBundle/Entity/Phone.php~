@@ -66,4 +66,27 @@ class Phone {
         $this->type = $type;
     }
 
+
+    /**
+     * Set person
+     *
+     * @param \AppBundle\Entity\Person $person
+     * @return Phone
+     */
+    public function setPerson(\AppBundle\Entity\Person $person = null)
+    {
+        $this->person = $person;
+
+        return $this;
+    }
+
+    /**
+     * Get person
+     *
+     * @return \AppBundle\Entity\Person 
+     */
+    public function getPerson()
+    {
+        return $this->person;
+    }
 }

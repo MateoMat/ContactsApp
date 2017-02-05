@@ -3,7 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraint as Assert;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Person
@@ -89,7 +89,7 @@ class Person
     public function setName($name)
     {
         $this->name = $name;
-
+        
         return $this;
     }
 

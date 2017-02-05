@@ -147,7 +147,7 @@ class PersonController extends Controller {
 
         return $this->render('AppBundle:Person:show_person.html.twig', array(
                     'person' => $person,
-                    'addres' => $addres
+                    'addres' => $addres,
         ));
     }
 

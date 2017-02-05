@@ -18,10 +18,16 @@
 
 {% if person.email is defined %}
     {% for emails in person.email %}
-        <p>{{ emails.email }}</p>
+        <p><b>adres e-mail: </b>{{ emails.email }}</p>
 
     {% endfor %}
 {% endif %}
+        {% if person.phone is defined %}
+            {% for phones in person.phone %}
+                <p><b>Numer telefonu: </b>{{ phones.number }}</p>
+
+            {% endfor %}
+        {% endif %}
 {% endif %}
 
 <a href="/showAll" class="btn btn-primary">Wróć na listę</a>
