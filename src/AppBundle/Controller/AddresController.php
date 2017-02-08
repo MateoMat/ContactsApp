@@ -79,8 +79,12 @@ class AddresController extends Controller {
      * @Route("/showAllAddres")
      */
     public function showAllAddresAction() {
+        
+        $em=$this->$getDoctrine()->getRepository('AppBundle:Addres');
+        $adres=$em->findAll();
+        
         return $this->render('AppBundle:Addres:show_all_addres.html.twig', array(
-                        // ...
+                        'adres'=>$adres
         ));
     }
 
